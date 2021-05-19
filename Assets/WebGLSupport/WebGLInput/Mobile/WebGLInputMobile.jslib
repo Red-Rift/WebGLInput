@@ -3,6 +3,8 @@ var WebGLInputMobile = {
 
     WebGLInputMobileRegister: function (touchend) {
         var id = instances.push(null) - 1;
+        
+        document.ready(function() { document.ontouchmove = function(e){ e.preventDefault(); }
 
         document.body.addEventListener("touchend", function () {
             document.body.removeEventListener("touchend", arguments.callee);

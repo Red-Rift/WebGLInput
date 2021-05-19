@@ -45,6 +45,11 @@ var WebGLInput = {
 		input.style.fontSize = fontsize + "px";
 		//input.setSelectionRange(0, input.value.length);
 		
+		input.onfocus = function () {
+			window.scrollTo(0, 0);
+			document.body.scrollTop = 0;
+		}
+
 		if(isPassword){
 			input.type = 'password';
 		}
